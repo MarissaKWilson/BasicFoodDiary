@@ -3,8 +3,7 @@ package com.MarissaKWilson.www.BasicFoodDiary.data;
 import java.util.ArrayList;
 
 public class Recipe implements DataObject {
-    Object ingr[];
-    ArrayList<Object[]> ingredients;
+    ArrayList<Food> ingredients;
     Nutrient nutrition;
     int servings;
     int servingSize;
@@ -12,9 +11,8 @@ public class Recipe implements DataObject {
 
     public Recipe(){}
 
-    public Recipe(Object ingr[], ArrayList<Object[]> ingredients, Nutrient nutrition, int servings,
+    public Recipe(ArrayList<Food> ingredients, Nutrient nutrition, int servings,
                   int servingSize, String servingUnit) {
-        this.ingr = ingr;
         this.ingredients = ingredients;
         this.nutrition = nutrition;
         this.servings = servings;
@@ -22,19 +20,11 @@ public class Recipe implements DataObject {
         this.servingUnit = servingUnit;
     }
 
-    public Object[] getIngr() {
-        return ingr;
-    }
-
-    public void setIngr(Object[] ingr) {
-        this.ingr = ingr;
-    }
-
-    public ArrayList<Object[]> getIngredients() {
+    public ArrayList<Food> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(ArrayList<Object[]> ingredients) {
+    public void setIngredients(ArrayList<Food> ingredients) {
         this.ingredients = ingredients;
     }
 
